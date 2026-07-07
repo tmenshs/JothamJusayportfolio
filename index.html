@@ -536,11 +536,15 @@
   }
 
   @media (max-width: 600px) {
-    .container { padding: 0 20px; }
+    .container { padding: 0 16px; }
+    body { line-height: 1.5; }
 
-    /* Nav becomes a slide-down mobile menu */
+    /* Nav becomes a slide-down mobile menu, more compact */
+    nav .container { padding-top: 12px; padding-bottom: 12px; }
+    .brand { font-size: 11px; letter-spacing: 3px; }
     .nav-field { display: none; }
-    .nav-toggle { display: flex; }
+    .nav-toggle { display: flex; width: 28px; height: 28px; gap: 4px; }
+    .nav-toggle span { width: 14px; }
     .navlinks {
       position: absolute;
       top: 100%;
@@ -552,52 +556,87 @@
       border-bottom: 1px solid var(--hair);
       max-height: 0;
       overflow: hidden;
-      transition: max-height .3s ease;
+      transition: max-height .25s ease;
+      font-size: 11px;
     }
-    .navlinks.open { max-height: 260px; }
+    .navlinks.open { max-height: 220px; }
     .navlinks a {
-      padding: 16px 20px;
+      padding: 12px 16px;
       border-top: 1px solid var(--hair);
       width: 100%;
     }
 
-    header.hero { padding: 56px 0 56px 0; }
-    .role { font-size: 34px; margin-top: 14px; }
-    .tagline { font-size: 17px; margin-top: 16px; }
-    .hero-cta { margin-top: 26px; gap: 14px; width: 100%; }
-    .hero-cta .btn { flex: 1; text-align: center; padding: 14px 18px; }
-    .photo-frame { width: 110px; height: 110px; }
+    header.hero { padding: 36px 0 32px 0; }
+    .hero-top-row { gap: 20px; }
+    .eyebrow { font-size: 10px; letter-spacing: 3px; }
+    .role { font-size: 27px; margin-top: 10px; line-height: 1.2; }
+    .tagline { font-size: 15px; margin-top: 12px; }
+    .hero-cta { margin-top: 18px; gap: 10px; width: 100%; }
+    .hero-cta .btn { flex: 1; text-align: center; padding: 11px 14px; font-size: 11px; }
+    .photo-frame { width: 84px; height: 84px; }
+    .photo-caption { font-size: 9px; letter-spacing: 2px; }
 
-    section { padding: 56px 0; }
-    .section-head { margin-bottom: 36px; }
-    .section-head h2 { font-size: 28px; }
-    .section-head p { font-size: 16px; }
+    section { padding: 34px 0; }
+    .section-head { margin-bottom: 22px; }
+    .section-head h2 { font-size: 23px; margin-top: 8px; }
+    .section-head p { font-size: 14px; margin-top: 10px; }
+    .divider { margin: 16px auto 0 auto; }
 
-    .about-grid { gap: 34px; }
-    .about-grid p { font-size: 16px; }
-    .stat-row { gap: 14px; }
-    .stat { padding: 16px 10px; }
-    .stat .num { font-size: 26px; }
-    .stat .label { font-size: 10px; letter-spacing: 1px; }
+    .about-grid { gap: 22px; }
+    .about-grid p { font-size: 14.5px; margin-bottom: 10px; }
+    .stat-row { gap: 10px; }
+    .stat { padding: 12px 8px; }
+    .stat .num { font-size: 21px; }
+    .stat .label { font-size: 9px; letter-spacing: .5px; margin-top: 4px; }
 
-    .skill-pill { font-size: 14px; padding: 9px 16px; }
+    .skills-row { gap: 8px; }
+    .skill-pill { font-size: 12.5px; padding: 7px 13px; }
 
-    .project-card { padding: 26px 22px; }
-    .project-card h3 { font-size: 21px; }
+    .project-grid { gap: 14px; }
+    .project-card { padding: 18px 16px; }
+    .project-tag { font-size: 10px; }
+    .project-card h3 { font-size: 18px; margin-top: 6px; }
+    .project-card .desc { font-size: 14px; margin-top: 6px; }
+    .project-card .view-more { margin-top: 12px; font-size: 10px; }
 
-    .cert-card { padding: 24px 20px; }
+    .cert-grid { gap: 14px; }
+    .cert-card { padding: 16px 14px; }
+    .status-row { margin-bottom: 10px; }
+    .cert-card .card-title { font-size: 17px; }
+    .cert-card .card-issuer { font-size: 14px; margin: 3px 0 10px 0; }
+    .cert-card .card-meta { font-size: 12.5px; padding-top: 8px; }
 
-    .contact-box { padding: 40px 22px; }
-    .contact-box h2 { font-size: 27px; }
+    .contact-box { padding: 26px 16px; }
+    .contact-box h2 { font-size: 22px; }
+    .contact-box p { font-size: 14px; }
+    .contact-form { margin-top: 18px; gap: 10px; }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select { padding: 11px 13px; font-size: 15px; }
 
-    .modal { padding: 30px 22px; max-height: 90vh; }
-    .modal h3 { font-size: 24px; }
+    footer { padding: 20px 0; font-size: 11px; }
+    .footer-brand { font-size: 11px; letter-spacing: 3px; }
+    .footer-sub { font-size: 11px; margin-top: 6px; }
+
+    .overlay { padding: 14px; }
+    .modal { padding: 22px 16px; max-height: 88vh; }
+    .verify-badge { font-size: 10px; padding: 5px 11px; margin-bottom: 12px; }
+    .modal h3 { font-size: 20px; margin-bottom: 4px; }
+    .modal .modal-issuer { font-size: 14px; margin-bottom: 14px; }
+    .modal-section { margin-bottom: 14px; }
+    .modal-section .h { font-size: 10px; margin-bottom: 5px; }
+    .modal-section p { font-size: 14px; }
+    .tech-pill { font-size: 11px; padding: 4px 9px; }
+
+    .glow.blue, .glow.green { width: 260px; height: 260px; filter: blur(60px); opacity: .25; }
   }
 
   @media (max-width: 380px) {
-    .role { font-size: 28px; }
-    .brand { font-size: 11px; letter-spacing: 3px; }
-    .section-head h2 { font-size: 24px; }
+    .role { font-size: 23px; }
+    .brand { font-size: 10px; letter-spacing: 2px; }
+    .section-head h2 { font-size: 20px; }
+    .hero-cta { flex-direction: column; }
+    .hero-cta .btn { width: 100%; }
   }
 </style>
 </head>
